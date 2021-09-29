@@ -3,7 +3,7 @@ import React from "react";
 import Layout from "../components/layout/main";
 import Table from "../components/table";
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch(`${process.env.BASE_URL}/blockchain?cache=enable`);
   const { blocks } = (await res.json()) || [];
   return { props: { blocks } };
