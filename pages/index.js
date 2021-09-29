@@ -1,4 +1,6 @@
 import React from "react";
+import { DateTime, Interval } from "luxon";
+import humanizeDuration from "humanize-duration";
 
 import Layout from "../components/layout/main";
 import Table from "../components/table";
@@ -18,7 +20,15 @@ export default function Home({ blocks }) {
       },
       {
         Header: "Time",
-        accessor: "time",
+        accessor: ({ time }) => {
+          const duration = Interval.fromDateTimes(
+            DateTime.fromMillis(time * 1000), // convert unix-timstamp to miliseconds
+            DateTime.now()
+          )
+            .toDuration()
+            .valueOf();
+          return humanizeDuration(duration, { delimiter: " and ", largest: 2 });
+        },
       },
       {
         Header: "Height",

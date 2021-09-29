@@ -7,6 +7,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "humanize-duration": "^3.27.0",
+    "luxon": "^2.0.2",
     "next": "latest",
     "nprogress": "^0.2.0",
     "react": "^17.0.2",
