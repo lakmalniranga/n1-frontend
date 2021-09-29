@@ -64,7 +64,7 @@ export default function Table({ columns, data }) {
                 key={i}
                 {...row.getRowProps()}
                 onClick={() => onRawClick(row)}
-                className="border-b border-gray-200 hover:bg-gray-100"
+                className="border-b border-gray-200 hover:bg-gray-100 cursor-pointer"
               >
                 {row.cells.map((cell, k) => {
                   return (
