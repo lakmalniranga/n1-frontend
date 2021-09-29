@@ -20,4 +20,4 @@ Since I'm more specialized in the backend, **I've put more effort into the backe
 
 ## TODO
 
-- List transactions in a block
+- Add page to list transactions in a block
